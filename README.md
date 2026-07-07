@@ -1,2 +1,2 @@
-# fish
-Fish, starship and fastfetch configs for IceShell
+# ice-fish
+## THIS REPO IS ARCHIVED IN FAVOUR OF https://github.com/bankaiseru/ice
