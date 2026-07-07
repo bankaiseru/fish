@@ -1,0 +1,44 @@
+# version: 1.0.0
+
+add_newline = false
+
+format = """
+$sudo\
+$username\
+$hostname\
+$directory\
+$character"""
+
+right_format = """
+$cmd_duration"""
+
+[fill]
+symbol = ' '
+
+[sudo]
+disabled = false
+format = "[󰻀 ](bold bright-red)"
+
+[username]
+show_always = true
+style_user = "bright-cyan bold italic"
+style_root = "purple bold italic"
+format = "[⭘ $user]($style)"
+
+[hostname]
+ssh_only = false
+format = "[@$hostname](bold bright-purple) "
+
+[directory]
+home_symbol = "⌂"
+format = "[$path]($style) "
+style = "bold bright-yellow"
+truncation_length = 3
+truncate_to_repo = true
+
+[character]
+format = "[~> ](bright-blue)"
+
+[cmd_duration]
+min_time = 0
+format = "[$duration▶ ](italic white)"

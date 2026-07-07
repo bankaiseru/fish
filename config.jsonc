@@ -1,0 +1,61 @@
+{
+    "logo": null,
+    "display": {
+        "separator": "",
+        "key": {
+            "paddingLeft": 5
+        }
+    },
+    "modules": [
+        "break",
+        {
+            "type": "command",
+            "key": " kernel    ",
+            "text": "printf '%-22s\n' $(uname -r)",
+            "keyColor": "cyan"
+        },
+        {
+            "type": "command",
+            "key": " uptime    ",
+            "text": "printf '%-22s\n' \"$(uptime -p | cut -d ' ' -f 2-)\"",
+            "keyColor": "green"
+        },
+        {
+            "type": "command",
+            "key": " shell     ",
+            "text": "printf '%-22s\n' \"fish $(fish --version | awk '{print $3}')\"",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "command",
+            "key": " mem       ",
+            "text": "printf '%-22s\n' \"$(free -m | awk 'NR==2{printf \"%.2f / %.2f GiB\",$3/1024,$2/1024}')\"",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "command",
+            "key": " pkgs      ",
+            "text": "printf '%-22s\n' \"$(pacman -Q | wc -l) (pacman)\"",
+            "keyColor": "green"
+        },
+        {
+            "type": "command",
+            "key": " user      ",
+            "text": "printf '%-22s\n' \"$USER\"",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "command",
+            "key": " hname     ",
+            "text": "printf '%-22s\n' \"$(hostname)\"",
+            "keyColor": "cyan"
+        },
+        {
+            "type": "command",
+            "key": "󰻀 distro    ",
+            "text": "printf '%-22s\n' \"Arch Linux x86_64\"",
+            "keyColor": "blue"
+        },
+        "break"
+    ]
+}
